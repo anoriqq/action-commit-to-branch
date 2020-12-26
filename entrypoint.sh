@@ -23,9 +23,9 @@ git status
 
 # Will create branch if it does not exist
 if [[ $( git branch -r | grep "$INPUT_BRANCH" ) ]]; then
-   git switch "${INPUT_BRANCH}"
+   git checkout "${INPUT_BRANCH}"
 else
-   git switch -c "${INPUT_BRANCH}"
+   git checkout -b "${INPUT_BRANCH}"
 fi
 
 git status
