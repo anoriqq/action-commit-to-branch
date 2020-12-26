@@ -21,7 +21,7 @@ The arguments for the `git add` command
 ## Example usage
 ```
 - name: Push to built branch
-  uses: Automattic/action-commit-to-branch@master
+  uses: anoriqq/action-commit-to-branch@master
   with:
     branch: 'master-built'
     commit_message: 'Build master'

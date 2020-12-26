@@ -18,7 +18,6 @@ EOF
 git_setup
 git remote update
 git fetch --all
-
 git stash save --all --include-untracked
 
 # Will create branch if it does not exist
