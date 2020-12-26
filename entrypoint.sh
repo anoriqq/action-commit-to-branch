@@ -19,7 +19,7 @@ git_setup
 git remote update
 git fetch --all
 
-git stash -au
+git stash save --all --include-untracked
 
 # Will create branch if it does not exist
 if [[ $( git branch -r | grep "$INPUT_BRANCH" ) ]]; then
