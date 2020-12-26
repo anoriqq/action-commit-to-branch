@@ -31,5 +31,8 @@ fi
 git status
 
 git add "${INPUT_ADD}"
+
+git status
+
 git commit -m "${INPUT_COMMIT_MESSAGE}"
 git push --set-upstream origin "${INPUT_BRANCH}"
