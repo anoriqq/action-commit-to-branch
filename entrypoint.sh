@@ -19,7 +19,7 @@ git_setup
 git remote update
 git fetch --all
 
-git stash save --all --include-untracked
+git status
 
 # Will create branch if it does not exist
 if [[ $( git branch -r | grep "$INPUT_BRANCH" ) ]]; then
@@ -28,7 +28,11 @@ else
    git checkout -b "${INPUT_BRANCH}"
 fi
 
-git stash pop
+git status
+
 git add "${INPUT_ADD}"
+
+git status
+
 git commit -m "${INPUT_COMMIT_MESSAGE}"
 git push --set-upstream origin "${INPUT_BRANCH}"
